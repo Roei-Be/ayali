@@ -1,0 +1,11 @@
+.navbar {
+    gap: 50px;
+    background: red;
+    margin: auto;
+    padding: 10px 0;
+    width: 80%;
+}
+
+.navbar span {
+    margin: 3px;
+}
