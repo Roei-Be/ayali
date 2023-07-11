@@ -1,0 +1,27 @@
+.reserchWrapper {
+    gap: 15px;
+    padding: 50px 0;
+    width: 70%;
+    margin: auto;
+}
+
+.reserchWrapper img {
+    float: left;
+    height: 450px;
+}
+
+.reserchContent {
+    text-align: left;
+}
+
+.reserchContent h3 {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+    font-size: 32px;
+
+}
+
+.reserchContent span {
+    font-size: 26px;
+}

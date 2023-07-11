@@ -2,6 +2,7 @@ import './App.css';
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import Reserch from "./components/Reserch";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
         <Navbar />
       </div>
       <div className="body">
-        <Home />
+        {/* <Home /> */}
+        <Reserch />
       </div>
     </div>
   );
