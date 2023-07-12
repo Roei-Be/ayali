@@ -1,12 +1,14 @@
+import { NavLink } from 'react-router-dom';
+
 import '../CSS/Navbar.css';
 
 const Navbar = () => {
     return (
         <div className="navbar">
-            <span>Home</span>
-            <span>Reserch</span>
+            <NavLink to={"/"} activeClassName={"active"}><span>Home</span></NavLink>
+            <NavLink to={"/reserch"}><span>Reserch</span></NavLink>
             <span>Publications</span>
-            <span>Lab Members</span>
+            <NavLink to={"/members"}><span>Lab members</span></NavLink>
             <span>Contact</span>
         </div>
     )

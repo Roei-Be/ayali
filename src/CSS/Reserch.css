@@ -1,5 +1,4 @@
 .reserchWrapper {
-    gap: 15px;
     padding: 50px 0;
     width: 70%;
     margin: auto;
@@ -7,7 +6,8 @@
 
 .reserchWrapper img {
     float: left;
-    height: 450px;
+    height: 30%;
+    margin-right: 15px;
 }
 
 .reserchContent {
@@ -24,4 +24,11 @@
 
 .reserchContent span {
     font-size: 26px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .reserchWrapper img {
+        max-width: 80%;
+    }
+
 }
