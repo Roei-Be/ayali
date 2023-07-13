@@ -22,7 +22,7 @@
 }
 
 .searchBar :hover {
-    border: rgb(107, 107, 107) 1.5px solid;
+    border: rgb(107, 107, 107) 1px solid;
 }
 
 .membersList {
