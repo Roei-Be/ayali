@@ -1,0 +1,68 @@
+.memberWrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    gap: 60px;
+}
+
+.memberWrapper .back {
+    position: absolute;
+}
+
+.memberWrapper .profile {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.memberWrapper .publish {
+    text-align: left;
+    font-size: 28px;
+}
+
+.profileCard,.profileContent {
+    margin-top: 50px;
+}
+
+.profileCard {
+    max-width: 25%;
+    min-width: 25%;
+}
+
+.profileCard .image {
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileCard .image img {
+    width: 100%;
+}
+
+.profileContent {
+    text-align: left;
+    width: 70%;
+}
+.profileContent .contact {
+    margin-bottom: 30px;
+}
+
+.profileContent .info {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.profileContent .CV {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profileContent .CV li{    
+    font-size: 18px;
+}
+
+.profileContent .education, .interests {
+    width: 45%;
+    overflow-wrap: break-word;
+}
