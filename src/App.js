@@ -20,8 +20,7 @@ function App() {
             <Route path='/' Component={Home} />
             <Route path='/reserch' Component={Reserch} />
             {/* <Route path='/publication' Component={Reserch} /> */}
-            <Route path='/members/' Component={Members} />
-            <Route path='/members/profile/:id' Component={MemberProfile} />
+            <Route path='/members/*' Component={Members} />
             <Route path='/test' Component={MemberProfile} />
           </Routes>
         </div>
