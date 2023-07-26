@@ -40,6 +40,20 @@
     width: 100%;
 }
 
+.profileCard .name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.profileCard .socials{
+    display: flex;
+}
+
+.profileCard Link{
+    width: auto; 
+    height: auto;
+}
+
 .profileContent {
     text-align: left;
     width: 70%;
