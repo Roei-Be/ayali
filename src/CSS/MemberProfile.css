@@ -47,11 +47,14 @@
 
 .profileCard .socials{
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 
-.profileCard Link{
-    width: auto; 
-    height: auto;
+.profileCard svg{
+    flex: 1;
+    max-width: 40px; 
+    height: 40px;
 }
 
 .profileContent {
