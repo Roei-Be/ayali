@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Reserch from "./components/Reserch";
 import Members from './components/Members';
-import MemberProfile from './components/MemberProfile';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
             <Route path='/reserch' Component={Reserch} />
             {/* <Route path='/publication' Component={Reserch} /> */}
             <Route path='/members/*' Component={Members} />
-            <Route path='/test' Component={MemberProfile} />
+            <Route path='/contact' Component={Contact} />
           </Routes>
         </div>
       </div>

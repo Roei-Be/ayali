@@ -9,6 +9,16 @@
 
 .slider {
     display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    align-items: center;
+    flex-direction: column;
+    width: 70vw;
+    height: 65vh;
+}
+
+/* .slider {
+    display: flex;
     white-space: nowrap;
     overflow: hidden;
     padding: 60px 0;
@@ -26,4 +36,4 @@
     .images img {
         height: 200px;
     }
-}
+} */
