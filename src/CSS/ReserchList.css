@@ -1,0 +1,44 @@
+.reserchListWrapper {
+    width: 80%;
+    display: flex;
+    padding-top: 50px;
+    margin: auto;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.listItem {
+    border: solid black 1px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    text-align: left;
+}
+
+.listItem .reserchImg {
+    overflow: hidden;
+    min-height: 300px;
+    min-width: 450px;
+    max-width: 500px;
+}
+
+.listItem .reserchImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.reserchPreviewContent .topic {
+    display: block;
+    color: rgb(143, 143, 143);
+    margin-top: -10px;
+}
+
+.reserchPreviewContent .title {
+    font-size: 42px;
+    font-weight: 700;
+    display: block;
+    margin: -10px;
+}

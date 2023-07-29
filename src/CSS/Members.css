@@ -101,4 +101,16 @@
     .membersWrapper{
         width: 90%;
     }
+
+    .searchBar input, .searchRole select, .searchActive select {
+        font-size: 16px;
+    }
+
+    .searchBar {
+        width: 100%;
+    }
+
+    .searchRole, .searchActive {
+        width: 50%;
+    }
 }

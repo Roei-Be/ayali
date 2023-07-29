@@ -1,4 +1,4 @@
-import Carousel from './Carousel';
+import Carousel from '../components/Carousel';
 
 import '../CSS/Home.css';
 

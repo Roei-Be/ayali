@@ -8,13 +8,13 @@ const Carousel = () => {
     const [images, setImages] = useState();
     
     Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTrx5a6lcEqohu2wlApKa6DnPUmNRfYoUkRXjajieoF7PyPOrGKKQeqiROrECNHKPXAYMKZfMrLNwaB/pub?gid=1673365678&single=true&output=csv", {
-            download: true,
-            header: true,
-            complete: (results) => {
-                setImages(results.data);
-                console.log(results.data);
-            }
-        })
+        download: true,
+        header: true,
+        complete: (results) => {
+            setImages(results.data);
+            console.log(results.data);
+        }
+    })
     return (
         <div className="carouselWrapper">
             <div className="carousel">
