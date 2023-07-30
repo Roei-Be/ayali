@@ -85,6 +85,13 @@
     font-weight: 600;
     font-size: 20px;
 }
+
+.memberItem .name p {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+}
+
 .memberItem .info {
     font-size: 15px;
 }

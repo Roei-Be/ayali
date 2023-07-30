@@ -38,18 +38,21 @@ const Carousel = () => {
 
     return (
         <div className="carouselWrapper">
-            <div className="arrow left" onClick={decreaseIndex}>{"<"}</div>
-            <div className="arrow right" onClick={increaseIndex}>{">"}</div>
+            
             <div className="carousel">
-                {images && images.map((img, i) => {
-                    return (
-                        <div key={i} className={i === currentIndex ? "carouselItem active" : "carouselItem"}>
-                            {console.log(currentIndex)}
-                            <img src={img.Image} alt={img.Caption} />
-                            <span>{img.Caption}</span>
-                        </div>
-                    )
-                })}
+                <div className="arrow left" onClick={decreaseIndex}>{"<"}</div>
+                <div className="imagesList">
+                    {images && images.map((img, i) => {
+                        return (
+                            <div key={i} className={i === currentIndex ? "carouselItem activeImg" : "carouselItem"}>
+                                {console.log(currentIndex)}
+                                <img src={img.Image} alt={img.Caption} />
+                                <span>{img.Caption}</span>
+                            </div>
+                        )
+                    })}
+                </div>
+                <div className="arrow right" onClick={increaseIndex}>{">"}</div>
             </div>
                 
             {images && <div className="imgSlider">
