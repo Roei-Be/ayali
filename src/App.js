@@ -1,6 +1,9 @@
+import { useContext } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './App.css';
+
+import { ThemeContext } from './context/ThemeContext';
 
 import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
@@ -9,13 +12,16 @@ import Members from './Pages/Members';
 import Contact from './Pages/Contact';
 
 function App() {
+
+  const {darkMode} = useContext(ThemeContext);
+
   return (
     <Router>
-      <div className="App">
+      <div className={`${darkMode ? "App" : "AppDark"}`}>
         <div className="header">
           <Navbar />
         </div>
-        <div className="body">
+        <div className={`${darkMode ? "body" : "bodyDark"}`}>
           <Routes>
             <Route path='/' Component={Home} />
             <Route path='/reserch/*' Component={Reserch} />

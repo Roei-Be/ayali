@@ -11,6 +11,11 @@
     height: 50px;
 }
 
+.navbarDark {
+    background-color: #29292b;
+    color: rgb(234, 234, 234);
+}
+
 .navbar .links {
     display: flex;
     flex-direction: row;
