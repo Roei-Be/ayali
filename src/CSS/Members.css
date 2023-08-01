@@ -12,23 +12,35 @@
     display: flex;
     min-width: 100%;
     flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.searchBar input, .searchRole select, .searchActive select {
+    border: rgba(213, 212, 212, 0.589) 1px solid;
+/*     padding: 5px 0 5px 5px; */
+    padding: 5px 0;
+    border-radius: 3px;
+    font-size: 26px;
+    transition: 1s;
 }
 
 .searchBar {
-    flex-grow: 1;
+    width: 55%;
+}
+
+.searchRole, .searchActive {
+    width: 20%;
+
+}
+
+.searchRole select, .searchActive select {
+    width: 100%;
 }
 
 .searchBar input {
     width: 100%;
 }
 
-.searchBar input, .searchRole select, .searchActive select {
-    border: rgba(213, 212, 212, 0.589) 1px solid;
-    padding: 5px;
-    border-radius: 3px;
-    font-size: 26px;
-    transition: 1s;
-}
 
 .searchBar input:focus {
     outline: none
@@ -116,14 +128,6 @@
     }
 
     .searchBar input, .searchRole select, .searchActive select {
-        font-size: 16px;
-    }
-
-    .searchBar {
-        width: 100%;
-    }
-
-    .searchRole, .searchActive {
-        width: 50%;
+        font-size: 14px;
     }
 }

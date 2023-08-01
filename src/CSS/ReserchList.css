@@ -1,20 +1,21 @@
 .reserchListWrapper {
+    min-height: 100vw;
     width: 80%;
     display: flex;
-    padding-top: 50px;
+    padding: 50px 0;
     margin: auto;
     flex-direction: column;
-    gap: 30px;
+    gap: 45px;
 }
 
 .listItem {
-    border: solid black 1px;
     position: relative;
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     gap: 30px;
     text-align: left;
+    box-shadow: 0px 26px 76px -38px rgba(0,0,0,0.75);
 }
 
 .listItem .reserchImg {
@@ -30,6 +31,10 @@
     object-fit: cover;
 }
 
+.reserchPreviewContent {
+    margin-right: 10px;
+}
+
 .reserchPreviewContent .topic {
     display: block;
     color: rgb(143, 143, 143);
@@ -40,5 +45,4 @@
     font-size: 42px;
     font-weight: 700;
     display: block;
-    margin: -10px;
 }
