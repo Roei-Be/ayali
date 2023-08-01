@@ -1,12 +1,11 @@
 .App {
   text-align: center;
   background-color: #f5f3ee;
-  min-height: 100vw;
+  min-height: 100vh;
 }
 
 .AppDark {
-  height: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   background-color: #19191b;
   color: white;
 }

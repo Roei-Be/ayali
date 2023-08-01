@@ -18,6 +18,10 @@
     box-shadow: 0px 26px 76px -38px rgba(0,0,0,0.75);
 }
 
+.listItemDark {
+    background-color: #29292b !important;
+}
+
 .listItem .reserchImg {
     overflow: hidden;
     min-height: 300px;

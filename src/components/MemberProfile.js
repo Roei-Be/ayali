@@ -30,7 +30,7 @@ const MemberProfile = () => {
             <>
                 <div className="profile">
                     <div className="profileCard">
-                        <div className="image"><img src={member.Photo} alt="" /></div>
+                        <div className="image"><img src={`${member.Photo ? member.Photo : "https://static.wixstatic.com/media/56112d_1efe4d20db6249f1a5876256376aabbc~mv2.gif"}`} alt="" /></div>
                         <div className="name">{member.Name}</div>
                         <div className="position">{member.Title}</div>
                         <br/>
@@ -50,15 +50,15 @@ const MemberProfile = () => {
                     <div className="profileContent">
                         <div className="info">{member.Long_Summary}</div>
                         
-                        <div className="contact">
+                        {member.Email && <div className="contact">
                             <h1>Contact details</h1>
                             <ul>
                                 {member.Email && <li><span>Email: </span>{member.Email}</li>}
                             </ul>
-                        </div>
+                        </div>}
 
                         <div className="CV">
-                            <div className="interests">
+                            {member.Interests && <div className="interests">
                                 <h1>Interests</h1>
                                 <ul>
                                     {(member.Interests.split(";")).map((x) => {
@@ -67,27 +67,27 @@ const MemberProfile = () => {
                                         )
                                     })}
                                 </ul>
-                            </div>
-                            <div className="education">
+                            </div>}
+                            {member.Education && <div className="education">
                                 <h2>Education</h2>
                                 <ul>
                                     <li>PhD</li>
                                     <li>MSdasdassssssssssssssssssssssssssssssssssssssssssssssdasdc</li>
                                 </ul>
-                            </div>
+                            </div>}
                         </div>
                     </div>
                 </div>
 
 
-                <div className="publish">
+                {member.Scholar && <div className="publish">
                     <h1>Latest</h1>
                     <ul>
                         <li>The neuromechanical control of Caenorhabditis elegans head motor behavior in a 3D environment</li>
                         <li>The neuromechanical control of Caenorhabditis elegans head motor behavior in a 3D environment</li>
                         <li>The neuromechanical control of Caenorhabditis elegans head motor behavior in a 3D environment</li>
                     </ul>
-                </div>
+                </div>}
             </>
             }
         </div>

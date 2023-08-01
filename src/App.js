@@ -17,11 +17,11 @@ function App() {
 
   return (
     <Router>
-      <div className={`${darkMode ? "App" : "AppDark"}`}>
+      <div className={`${darkMode ? "AppDark" : "App"}`}>
         <div className="header">
           <Navbar />
         </div>
-        <div className={`${darkMode ? "body" : "bodyDark"}`}>
+        <div className={`${darkMode ? "bodyDark" : "body"}`}>
           <Routes>
             <Route path='/' Component={Home} />
             <Route path='/reserch/*' Component={Reserch} />
