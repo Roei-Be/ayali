@@ -110,7 +110,7 @@
 }
 
 .info .socials {
-    display: inline-block;
+    display: block;
     z-index: 999;
 }
 
