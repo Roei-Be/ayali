@@ -5,13 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { ThemeContextProvider } from './context/ThemeContext';
+import { DBContextProvider } from './context/DBContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeContextProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <DBContextProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </DBContextProvider>
   </ThemeContextProvider>
 );
 

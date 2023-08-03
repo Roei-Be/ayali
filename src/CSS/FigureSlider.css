@@ -1,10 +1,8 @@
 .figures_slideshow_wrapper {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba(112, 112, 112, 0.9);
@@ -23,21 +21,10 @@
     /* z-index: 2; */
 }
 
-#figures_slideshow_close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  /* margin: 1% 1% 0 auto; */
-  cursor: pointer;
-  font-size: 46px;
-  color: #212F3C;
-}
-
 .figures_slideshow_wrapper .mySlides {
-    display: none;
+    /* display: none; */
 }
 
-/* Fading animation */
 .figures_slideshow_wrapper .fade {
   animation-name: fade;
   animation-duration: 0.6s;
@@ -48,104 +35,51 @@
   to {opacity: 1}
 }
 
-.figures_slideshow_wrapper img {
-    vertical-align: middle;
-    width: 100%;
-    border-radius: 5px;
-}
-
 /* Next & previous buttons */
-.figures_slideshow_wrapper .prev, .figures_slideshow_wrapper .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    background-color: #718699;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    user-select: none;
-}
-
-[dir=rtl].figures_slideshow_wrapper .prev {
-  transform: scaleX(-1);
-}
-
-[dir=rtl].figures_slideshow_wrapper .next {
-  transform: scaleX(-1);
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  background-color: #718699;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
 }
 
 /* Position the "next button" to the right */
 .figures_slideshow_wrapper .prev {
-  left: 0;
-  border-radius: 0 3px 3px 0;
+left: 0;
+border-radius: 0 3px 3px 0;
 }
 
 .figures_slideshow_wrapper .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+right: 0;
+border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a semi-transparent black background */
 .figures_slideshow_wrapper .prev:hover, .figures_slideshow_wrapper .next:hover {
-  background-color: #212F3C;
+background-color: #212F3C;
 }
 
-/* Caption */
-
-.figure_caption_wrapper {
-  position: relative;
-  display: flex;
-  height: 20%;
-  width: 95%;
-  margin: 0 0px;
-  border-radius: 5px;
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next, .figure_caption {
+      font-size: 11px;
+  }
 }
 
-.figure_caption_wrapper span {
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  margin: 10px;
-  color: #212F3C;
-}
-
-.figure_caption_wrapper .save_changes {
-  right: 30px;
-}
-
-.figures_slideshow_wrapper .figure_caption {
-    display: flex;
-    color: black;
-    background-color: white;
-    font-size: 15px;
-    padding: 8px 8px;
-    width: 100%;
-    /* position: absolute; */
-    /* bottom: 0px; */
-    /* border: 1px solid black; */
-}
-
-/* Number text (1/3 etc) */
-/* .figures_slideshow_wrapper .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-} */
-
-/* The dots/bullets/indicators */
 .dots {
-    height: 20px;
-    text-align: center;
+  height: 20px;
+  text-align: center;
 }
 
-.figures_slideshow_wrapper .dot {
+.dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -157,95 +91,11 @@
   transition: background-color 0.6s ease;
 }
 
-.figures_slideshow_wrapper .active, .figures_slideshow_wrapper .dot:hover {
+.dot:hover {
   background-color: #212F3C;
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    .prev, .next, .figure_caption {
-        font-size: 11px;
-    }
+.notActive {
+  display: none;
 }
-
-.full_solution_figures_wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 2px solid #212F3C;
-  border-radius: 7px;
-  height: 100px;
-  padding: 2px 4px;
-}
-
-.full_solution_figures_wrapper_dark {
-  border: 2px solid #bfbfbf !important;
-}
-
-.full_solution_figure {
-  object-fit: contain;
-  height: 100px;
-  border-radius: 7px;
-  margin-left: 6px;
-  cursor: -moz-zoom-in; 
-  cursor: -webkit-zoom-in; 
-  cursor: zoom-in;
-}
-
-.figure_preview {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.figure_preview span {
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  font-size: 20px;
-  color: #212F3C;
-}
-
-.figure_preview .update_figure_label {
-  position: absolute;
-  top: 0;
-  right: 25px !important;
-  cursor: pointer;
-}
-
-/* Full view */
-/* ********* */
-.full_solution_figure_large {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  /* width: 500px; */
-  /* height: 500px; */
-  top: -200px;
-  background-color: #212F3C;
-  width: 100%;
-}
-
-.full_solution_figure_large img {
-  object-fit: contain;
-  height: 350px;
-}
-
-.attach_figure_file_label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* border: 1px solid #212F3C; */
-  border-radius: 5px;
-  height: 96px;
-  width: 96px;
-  background-color: rgb(230, 230, 230);
-  cursor: pointer;
-}
-
-.attach_figure_file_label span {
-  color: #212F3C;
-  font-size: 30px;
-}
+/* ==================== */

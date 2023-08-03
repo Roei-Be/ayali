@@ -1,20 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { DBContext } from "../context/DBContext";
 import { Link } from "react-router-dom";
 import Papa from "papaparse";
 
-
 const MembersList = () => {
-    const [members, setMembers] = useState(null);
-    useEffect(() => {
-        Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTrx5a6lcEqohu2wlApKa6DnPUmNRfYoUkRXjajieoF7PyPOrGKKQeqiROrECNHKPXAYMKZfMrLNwaB/pub?output=csv", {
-            download: true,
-            header: true,
-            complete: (results) => {
-                console.log(results);
-                setMembers(results.data);
-            }
-        })
-    },[]);
+
+    const { members } = useContext(DBContext);
 
     const [inputValue, setInputValue] = useState("");
     const [RoleValue, setRoleValue] = useState("");

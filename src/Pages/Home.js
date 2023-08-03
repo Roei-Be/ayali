@@ -5,9 +5,11 @@ import '../CSS/Home.css';
 
 const Home = () => {
  return (
-    <div className="slider">
-        {/* <Carousel /> */}
-        {/* <FigureSlider /> */}
+    <div className="homeWrapper">
+        <h1>InsectLab</h1>
+        <div className="slider">
+            <Carousel />
+        </div>
     </div>
  )
 }

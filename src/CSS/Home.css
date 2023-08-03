@@ -1,11 +1,11 @@
-/* @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-} */
+.homeWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.homeWrapper h1 {
+    margin: 30px auto;
+}
 
 .slider {
     display: flex;

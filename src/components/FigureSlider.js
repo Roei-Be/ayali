@@ -1,23 +1,12 @@
 import { useState, useEffect, useContext } from "react";
+import { DBContext } from "../context/DBContext";
 import Papa from "papaparse";
 
 import '../CSS/FigureSlider.css'
 
 const FigureSlider = () => {
 
-    
-    const [images, setImages] = useState();
-    
-    useEffect(() => {
-        Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTrx5a6lcEqohu2wlApKa6DnPUmNRfYoUkRXjajieoF7PyPOrGKKQeqiROrECNHKPXAYMKZfMrLNwaB/pub?gid=1673365678&single=true&output=csv", {
-            download: true,
-            header: true,
-            complete: (results) => {
-                setImages(results.data);
-                console.log(results.data);
-            }
-        })
-    },[])
+    const {images} = useContext(DBContext);
     
     const [currentIndex, setCurrentIndex] = useState(0)
     const increaseIndex = () => {
@@ -40,8 +29,7 @@ const FigureSlider = () => {
         <div className="figures_slideshow_wrapper">
             <div id="figures_slideshow" className="figures_slideshow" tabIndex="0">
                 {images && images.map((figure,i) => (
-                    <div key={i} className="mySlides fade">
-                        {/* alert(figure.file) */}
+                    <div key={i} className={`${i === currentIndex ? "mySlides fade" : "notActive"}`}>
                         <img src={figure.Image} />
                     </div>
                 ))}
@@ -53,7 +41,7 @@ const FigureSlider = () => {
             
             <div className="dots">
                 {images && images.map((image,i) => (
-                    <span key={i} className="dot" onClick={() => setCurrentIndex(i)}></span>
+                    <span key={i} className={`${i === currentIndex ? "dot" : "dot activeDot"}`} onClick={() => setCurrentIndex(i)}></span>
                 ))}
             </div>
         </div>

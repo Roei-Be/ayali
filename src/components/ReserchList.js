@@ -3,24 +3,14 @@ import { Link } from "react-router-dom";
 import Papa from "papaparse";
 
 import { ThemeContext } from '../context/ThemeContext';
+import { DBContext } from '../context/DBContext';
 
 import '../CSS/ReserchList.css';
 
 const ReserchList = () => {
 
     const {darkMode} = useContext(ThemeContext);
-
-    const [reserches, setReserches] = useState();
-    useEffect(() => {
-        Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTrx5a6lcEqohu2wlApKa6DnPUmNRfYoUkRXjajieoF7PyPOrGKKQeqiROrECNHKPXAYMKZfMrLNwaB/pub?gid=1610881085&single=true&output=csv", {
-            download: true,
-            header: true,
-            complete: (results) => {
-                setReserches(results.data);
-                console.log(results.data);
-            }
-        })
-    },[]);
+    const {reserches} = useContext(DBContext);
 
     return (
         <div className="reserchListWrapper">

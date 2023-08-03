@@ -1,22 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import Papa from "papaparse";
 
 import '../CSS/carousel.css';
+import { DBContext } from '../context/DBContext';
 
 const Carousel = () => {
 
-    const [images, setImages] = useState();
-
-    useEffect(() => {
-        Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTrx5a6lcEqohu2wlApKa6DnPUmNRfYoUkRXjajieoF7PyPOrGKKQeqiROrECNHKPXAYMKZfMrLNwaB/pub?gid=1673365678&single=true&output=csv", {
-            download: true,
-            header: true,
-            complete: (results) => {
-                setImages(results.data);
-                console.log(results.data);
-            }
-        })
-    },[])
+    const {images} = useContext(DBContext);
 
     const [currentIndex, setCurrentIndex] = useState(0)
     const increaseIndex = () => {
@@ -40,28 +30,25 @@ const Carousel = () => {
         <div className="carouselWrapper">
             
             <div className="carousel">
-                <div className="arrow left" onClick={decreaseIndex}>{"<"}</div>
-                <div className="imagesList">
-                    {images && images.map((img, i) => {
+                {images && <div className="imagesList">
+                    {images.map((img, i) => {
                         return (
                             <div key={i} className={i === currentIndex ? "carouselItem activeImg" : "carouselItem"}>
                                 {console.log(currentIndex)}
                                 <img src={img.Image} alt={img.Caption} />
-                                <span>{img.Caption}</span>
+                                <div className="caption"><span>{img.Caption}</span></div>
                             </div>
                         )
                     })}
-                </div>
-                <div className="arrow right" onClick={increaseIndex}>{">"}</div>
+                    <a className="prev" onClick={decreaseIndex}>❮</a>
+                    <a className="next" onClick={increaseIndex}>❯</a>
+                </div>}
             </div>
-                
-            {images && <div className="imgSlider">
-                {images.map((img, i) => {
-                    return (
-                        <div key={i} className={i === currentIndex ? "slidePoint selectedImg" : "slidePoint"} onClick={() => {setCurrentIndex(i)}}></div>
-                    )
-                })}
-            </div>}
+            <div className="dots">
+                {images && images.map((image,i) => (
+                    <span key={i} className={`${i === currentIndex ? "dot activeDot" : "dot"}`} onClick={() => setCurrentIndex(i)}></span>
+                ))}
+            </div>
         </div>
     )
 }

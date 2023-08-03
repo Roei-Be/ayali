@@ -1,26 +1,20 @@
+import { useContext, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import '../CSS/MemberProfile.css'
-import { useEffect, useState } from 'react';
+import { DBContext } from '../context/DBContext';
 import Papa from "papaparse";
+
+import '../CSS/MemberProfile.css'
 
 const MemberProfile = () => {
 
-    const { id } = useParams();
-    console.log(id);
-
+    const {members} = useContext(DBContext);
     const [member, setMember] = useState();
 
+    const { id } = useParams();
+
     useEffect(() => {
-        Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTrx5a6lcEqohu2wlApKa6DnPUmNRfYoUkRXjajieoF7PyPOrGKKQeqiROrECNHKPXAYMKZfMrLNwaB/pub?output=csv", {
-            download: true,
-            header: true,
-            complete: (results) => {
-                // console.log(results);
-                setMember(results.data[id]);
-                console.log(results.data[0]);
-            }
-        })
-    },[]);
+        members && setMember(members[id]);
+    },[members]);
 
     return(
         <div className="memberWrapper">
