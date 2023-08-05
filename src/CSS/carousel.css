@@ -80,13 +80,10 @@
     height: 20px;
 }
 
-/* .imgSlider .selectedImg {
-    background-color: red;
-    transition: 0.5s ease-in-out;
-} */
-
 .dots {
+    display: flex;
     margin: 30px;
+    justify-content: center;
 }
 
 .dot {
@@ -98,7 +95,7 @@
     border: 2px solid #212F3C;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: 0.6s ease;
 }
   
 .dot:hover, .activeDot {
@@ -116,6 +113,8 @@
     top: 50%;
     width: 16px;
     height: 16px;
+    font-size: 26px;
+    padding: 10px;
     color: white;
     background-color: #718699;
     font-weight: bold;

@@ -1,7 +1,6 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { DBContext } from "../context/DBContext";
 import { Link } from "react-router-dom";
-import Papa from "papaparse";
 
 const MembersList = () => {
 

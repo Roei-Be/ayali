@@ -1,5 +1,4 @@
 import Carousel from '../components/Carousel';
-import FigureSlider from '../components/FigureSlider';
 
 import '../CSS/Home.css';
 

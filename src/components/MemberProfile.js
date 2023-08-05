@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { DBContext } from '../context/DBContext';
-import Papa from "papaparse";
 
 import '../CSS/MemberProfile.css'
 

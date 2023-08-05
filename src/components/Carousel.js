@@ -1,5 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
-import Papa from "papaparse";
+import { useState, useContext } from 'react';
 
 import '../CSS/carousel.css';
 import { DBContext } from '../context/DBContext';
