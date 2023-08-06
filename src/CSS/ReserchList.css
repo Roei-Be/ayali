@@ -16,6 +16,7 @@
     gap: 30px;
     text-align: left;
     box-shadow: 0px 26px 76px -38px rgba(0,0,0,0.75);
+    background-color: #f5f3ee !important;
 }
 
 .listItemDark {
@@ -36,7 +37,7 @@
 }
 
 .reserchPreviewContent {
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .reserchPreviewContent .topic {

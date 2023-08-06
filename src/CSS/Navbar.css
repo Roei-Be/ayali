@@ -8,11 +8,12 @@
     justify-content: space-between;
     background-color: white;
     width: 100%;
-    height: 50px;
+    height: 60px;
+    outline: 1px solid black;
 }
 
 .navbarDark {
-    background-color: #1a1a1b;
+    background-color: #333333;
     color: rgb(234, 234, 234);
 }
 
@@ -28,8 +29,12 @@ a, a:visited {
 }
 
 .active span{
-    color: white;
-    background-color: rgb(61, 62, 66);
+    background-color: #f8fdff;
+    /* background-color: rgb(41, 42, 42); */
+}
+
+.navbarDark .active span {
+    background-color: #515151;
 }
 
 
@@ -37,7 +42,8 @@ a, a:visited {
     display: flex;
     align-items: center;
     min-height: 100%;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     transition: 0.25s;
     padding: 0 15px;
 }

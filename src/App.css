@@ -6,14 +6,15 @@
 
 .App {
   text-align: center;
-  background-color: #f5f3ee;
+  background-color: #f8fdff;
+  /* background-color: #f5f3ee; */
   min-height: 100vh;
 }
 
 .AppDark {
   text-align: center;
   min-height: 100vh;
-  background-color: black;
+  background-color: #515151;
   color: white;
 }
 
