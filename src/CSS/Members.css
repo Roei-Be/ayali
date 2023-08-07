@@ -69,15 +69,22 @@
     gap: 8px;
     width: 100%;
     border-top: 1px solid rgba(128, 128, 128, 0.4);
+    transition: 0.3s ease-in-out;
+}
+
+.memberItem:hover {
+    background-color: #232230;
 }
 
 .memberItem .img {
+    display: flex;
     top: 0;
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
     background-color: white;
-    height: 52px;
-    max-width: 52px;
-    min-width: 52px;
+    height: 100px;
+    width: 100px;
+    /* max-width: 52px;
+    min-width: 52px; */
     border-radius: 50%;
 }
 
@@ -152,6 +159,9 @@
 }
 
 .memberItem .goto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     right: 20px;
     top: 50%;
@@ -161,8 +171,9 @@
     background-color: white;
     color: #3d3e42;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    /* width: 30px;
+    height: 30px; */
+    padding: 10px;
 }
 
 /* .memberItem .goto:hover {
