@@ -6,14 +6,13 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: rgb(254, 254, 254);
     width: 100%;
     height: 60px;
-    outline: 1px solid black;
 }
 
 .navbarDark {
-    background-color: #333333;
+    background-color: rgb(57, 60, 71);
     color: rgb(234, 234, 234);
 }
 
@@ -29,12 +28,12 @@ a, a:visited {
 }
 
 .active span{
-    background-color: #f8fdff;
+    background-color: #eff5f8;
     /* background-color: rgb(41, 42, 42); */
 }
 
 .navbarDark .active span {
-    background-color: #515151;
+    background-color: #282834;
 }
 
 

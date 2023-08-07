@@ -6,7 +6,7 @@
 
 .App {
   text-align: center;
-  background-color: #f8fdff;
+  background-color: #eff5f8;
   /* background-color: #f5f3ee; */
   min-height: 100vh;
 }
@@ -14,7 +14,7 @@
 .AppDark {
   text-align: center;
   min-height: 100vh;
-  background-color: #515151;
+  background-color: #282834;
   color: white;
 }
 
