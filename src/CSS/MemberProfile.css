@@ -1,5 +1,5 @@
 .memberWrapper {
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -74,7 +74,7 @@
 }
 
 .profileContent .info {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 

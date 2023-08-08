@@ -73,6 +73,10 @@
 }
 
 .memberItem:hover {
+    background-color: #bbdefb;
+}
+
+.memberItemDark:hover {
     background-color: #232230;
 }
 
@@ -82,7 +86,8 @@
     /* outline: 1px solid black; */
     background-color: white;
     height: 100px;
-    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
     /* max-width: 52px;
     min-width: 52px; */
     border-radius: 50%;
@@ -140,22 +145,20 @@
     margin: 10px 0 !important;
 }
 
-.info .socials svg {
+.info .socials {
     display: flex;
     flex-direction: row;
-    font-size: 18px;
-    margin: 10px;
-    z-index: 999;
-    color: white;
+    gap: 7px;
 }
 
-.memberItemDark .info .socials {
-    color: #bbdefb;
+.socials a {
+    display: flex;
+    align-items: center;
 }
 
-.info .socials div {
-    display: inline-block;
-    margin: 0 3px;
+.info .socials .svgIcon {
+    align-items: center;
+    font-size: 22px;
 }
 
 .memberItem .goto {

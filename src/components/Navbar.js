@@ -9,11 +9,13 @@ const Navbar = () => {
 
     const {darkMode, setDarkMode} = useContext(ThemeContext);
 
-    const darkModeSwithc = () => {
+    const darkModeSwitch = () => {
         if (darkMode === true) {
             setDarkMode(false);
+            document.cookie = "false"
         } else {
             setDarkMode(true);
+            document.cookie = "true";
         }
     }
 
@@ -28,7 +30,7 @@ const Navbar = () => {
                 <NavLink to={"/contact"}><span>Contact</span></NavLink>
             </div>
 
-            <div className='darkModeSwitch' onClick={darkModeSwithc}>
+            <div className='darkModeSwitch' onClick={darkModeSwitch}>
                 {darkMode && <span>🌚</span>}
                 {!darkMode && <span>🌝</span>}
             </div>

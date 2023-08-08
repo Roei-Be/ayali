@@ -3,6 +3,12 @@
     margin: 0;
 }
 
+a, a:visited {
+    text-decoration: none;
+    color: inherit;
+    padding: 0;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -21,22 +27,6 @@
     flex-direction: row;
 }
 
-a, a:visited {
-    text-decoration: none;
-    color: inherit;
-    padding: 0;
-}
-
-.active span{
-    background-color: #eff5f8;
-    /* background-color: rgb(41, 42, 42); */
-}
-
-.navbarDark .active span {
-    background-color: #282834;
-}
-
-
 .links span {
     display: flex;
     align-items: center;
@@ -48,9 +38,21 @@ a, a:visited {
 }
 
 .links span:hover {
-    color: white;
-    background-color: rgba(61, 62, 66, 0.858);
+    background-color: #d7dcdf;
 }
+
+.navbarDark .links span:hover {
+    background-color: #404057;
+}
+
+.active span{
+    background-color: #eff5f8 !important;
+}
+
+.navbarDark .active span {
+    background-color: #282834 !important;
+}
+
 
 .logo {
     height: 100%;
