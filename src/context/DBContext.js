@@ -35,11 +35,24 @@ export const DBContextProvider = ({ children }) => {
             download: true,
             header: true,
             complete: (results) => {
-                console.log(results);
-                setMembers(results.data);
+                results = results.data.map((item) => {
+                    if (item.Photo.includes("drive.google.com/file/d/")) {
+                        return {...item, Photo: `https://drive.google.com/uc?export=view&id=${item.Photo.match(/\/d\/(.*?)\/view/)[1]}`}
+                    } else {
+                        return {...item}
+                    }
+                })
+                console.log("members:" + results);
+                setMembers(results);
             }
         })
     },[]);
+
+    /* useEffect(() => {
+        reserches && console.log("1:" + reserches[4].Image.match(/\/d\/(.*?)\/view/)[1]);
+        reserches && console.log("2:" + reserches[4].Image.includes("https://drive.google.com/file/d/"));
+
+    },[reserches]) */
 
     return (
         <DBContext.Provider value={{
