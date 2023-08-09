@@ -1,10 +1,13 @@
 import { useState, useContext } from 'react';
 
 import '../CSS/carousel.css';
+
 import { DBContext } from '../context/DBContext';
+import {ThemeContext} from '../context/ThemeContext';
 
 const Carousel = () => {
 
+    const {darkMode} = useContext(ThemeContext);
     const {images} = useContext(DBContext);
 
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -26,7 +29,7 @@ const Carousel = () => {
 
 
     return (
-        <div className="carouselWrapper">
+        <div className={`"carouselWrapper" ${darkMode ? "carouselWrapper carouselWrapperDark" : "carouselWrapper"}`}>
             
             <div className="carousel">
                 {images && <div className="imagesList">

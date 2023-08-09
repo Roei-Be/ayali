@@ -38,6 +38,21 @@ export const DBContextProvider = ({ children }) => {
                 results = results.data.map((item) => {
                     if (item.Photo.includes("drive.google.com/file/d/")) {
                         return {...item, Photo: `https://drive.google.com/uc?export=view&id=${item.Photo.match(/\/d\/(.*?)\/view/)[1]}`}
+                        /* fetch(`https://drive.google.com/uc?export=view&id=${item.Photo.match(/\/d\/(.*?)\/view/)[1]}`)
+                            .then(response => response.blob())
+                            .then(blob => {
+                                const reader = new FileReader();
+
+                                reader.onload = function (e) {
+                                const base64Data = e.target.result;
+                                console.log("64:" + base64Data); // This is the base64-encoded image data
+                                };
+
+                                reader.readAsDataURL(blob);
+                            })
+                            .catch(error => {
+                                console.error("Error fetching or converting image:", error);
+                            }); */
                     } else {
                         return {...item}
                     }
