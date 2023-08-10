@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ayali/static/css/main.e1b62906.css",
-    "main.js": "/ayali/static/js/main.0c8931e9.js",
+    "main.js": "/ayali/static/js/main.e0d07fdd.js",
     "static/js/787.a0905ad9.chunk.js": "/ayali/static/js/787.a0905ad9.chunk.js",
     "index.html": "/ayali/index.html",
     "main.e1b62906.css.map": "/ayali/static/css/main.e1b62906.css.map",
-    "main.0c8931e9.js.map": "/ayali/static/js/main.0c8931e9.js.map",
+    "main.e0d07fdd.js.map": "/ayali/static/js/main.e0d07fdd.js.map",
     "787.a0905ad9.chunk.js.map": "/ayali/static/js/787.a0905ad9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e1b62906.css",
-    "static/js/main.0c8931e9.js"
+    "static/js/main.e0d07fdd.js"
   ]
 }
