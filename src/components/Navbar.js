@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
 
 import '../CSS/Navbar.css';
+import DarkMode from '../assets/DarkMode';
+import LightMode from '../assets/LightMode';
 
 const Navbar = () => {
 
@@ -31,8 +33,7 @@ const Navbar = () => {
             </div>
 
             <div className='darkModeSwitch' onClick={darkModeSwitch}>
-                {darkMode && <span>🌚</span>}
-                {!darkMode && <span>🌝</span>}
+                <span>{darkMode ? <LightMode color={"white"}/> : <DarkMode color={"black"}/>}</span>
             </div>
         </div>
     )

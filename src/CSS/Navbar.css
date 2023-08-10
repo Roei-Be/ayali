@@ -38,11 +38,10 @@ a, a:visited {
 }
 
 .links span:hover {
-    background-color: #d7dcdf;
-}
-
-.navbarDark .links span:hover {
-    background-color: #404057;
+    /* background-color: #d7dcdf; */
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.37) inset;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.37) inset;
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.37) inset;
 }
 
 .active span{
@@ -53,7 +52,6 @@ a, a:visited {
     background-color: #282834 !important;
 }
 
-
 .logo {
     height: 100%;
     object-fit: cover;
@@ -62,6 +60,25 @@ a, a:visited {
 
 .logo img {
     height: 100%;
+}
+
+.darkModeSwitch {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.darkModeSwitch:hover {
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.37) inset;
+-webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.37) inset;
+-moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.37) inset;
+}
+
+.darkModeSwitch .svgIcon {
+    font-size: 28px;
+    padding: 0 20px;
 }
 
 @media only screen and (max-width: 1100px) {
